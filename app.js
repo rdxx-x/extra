@@ -7,7 +7,7 @@ var cron = require('./config/cron')
 var Client = require('./config/cliente')
 var clients = []
 
-app.set('port', config.server.port || 3000)
+app.set('port', process.env.PORT || 3000)
 app.use(express.static('public'))
 app.use(express.json())
 app.use('/', (req, res) => {
